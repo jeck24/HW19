@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import randomUser from "./randomUser";
+import RandomUser from "./randomUser";
 
 
 function Users (props) {
@@ -15,7 +15,7 @@ function Users (props) {
                 </div>
                 
                 {props.data.length > 0 && props.data.map( (user)=> {
-                    return <randomUser 
+                    return <RandomUser 
                     image = {user.picture.thumbnail}
                     key ={user.name.first + user.name.last}
                     name={user.name.first}
