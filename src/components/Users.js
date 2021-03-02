@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import RandomUser from "./randomUser";
-
+import '../App.css';
 
 function Users (props) {
     return (

@@ -1,24 +1,16 @@
 import React, { Component } from "react";
 import Users from "./Users";
 import API from "../utils/API";
+import '../App.css';
 
 class List extends Component {
-
-  state = {
+    state = {
+        results: [],
+        temp: []
+    };
     
-    results: [],
-    temp: []
-
-  };
-
-  handleInputChange = event => {
-
-    const{value} = event.target;
-
-
-
-    var result = this.state.results.filter(item => item.name.first.toLowerCase().includes(value));
-    console.log(result);
+    handleInputChange = event => {
+        const{prop} = event.target;
 
 
     this.setState(
@@ -26,7 +18,7 @@ class List extends Component {
         
         temp: this.state.results.filter((item) => 
         {
-          if(item.name.first.toLowerCase().includes(value) || item.name.last.toLowerCase().includes(value) || item.email.toLowerCase().includes(value))
+          if(item.name.first.toLowerCase().includes(prop) || item.name.last.toLowerCase().includes(prop) || item.email.toLowerCase().includes(prop))
           return item;
         })
       
@@ -35,13 +27,11 @@ class List extends Component {
       }
     );
 
-    console.log(value);
-
   };
 
   searchUsers = async ()=>{
 
-    document.getElementById("searchInput").value = "";
+    document.getElementById("searchInput").prop = "";
 
     const results =await API.getUsers()
       .then(res => {
