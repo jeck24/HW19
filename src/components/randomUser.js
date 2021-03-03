@@ -1,17 +1,17 @@
 import React from "react";
+import '../App.css';
 
 function randomUser(props){
     return (
-        <div className="randomUser flex-row">
+        <div className="randomUser">
             <img alt = "img" src={props.image} className="image"/>
-            <div className = "user" id="firstName">{props.name}</div>
-            <div className = "user" id="lastName">{props.lastName}</div>
-            <div className = "user" id="email">{props.email}</div>
-            <div className = "user" id="phone">{props.phone}</div>
-            <div className = "user" id="adress">{props.adress}</div>             
+            <div className = "firstName">First name: {props.name}</div>
+            <div className = "lastName">Last name: {props.lastName}</div>
+            <div className = "email">email: {props.email}</div>
+            <div className = "phone">Phone Number: {props.phone}</div>
+            <div className = "adress">Home Address: {props.adress}</div>             
         </div>
     );
-    
 }
   
 export default randomUser;

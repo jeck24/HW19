@@ -37,6 +37,31 @@
   }
 }
 
+.header{
+  margin: auto;
+  border: solid grey;
+}
+
+h1{
+  margin: auto;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
 .firstLine{
-  background-color: red;
+  border: solid gray 10px;
+}
+
+.firstSection{
+  float: right;
+}
+
+.upperTable{
+  text-align: justify;
+}
+
+.randomUser{
+  border: solid grey;
 }
