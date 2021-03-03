@@ -1,12 +1,12 @@
-import React, {Component} from "react";
+import React from "react";
 import RandomUser from "./randomUser";
 import '../App.css';
 
 function Users (props) {
     return (
-        <div className="content flex-row flex-center">
-            <div className="flex-col pt-6">
-                <div className="titles flex-row">
+        <div className="wholeTable">
+            <div className="upperTable">
+                <div className="firstLine">
                     <div>First Name</div>
                     <div>Last Name</div>
                     <div>E-mail</div>
@@ -14,12 +14,13 @@ function Users (props) {
                     <div>Adress</div>
                 </div>
                 
-                {props.data.length > 0 && props.data.map( (user)=> {
+                {props.data.length > 0 && props.data.map((user)=> {
+                    const bring = user.name;
                     return <RandomUser 
                     image = {user.picture.thumbnail}
-                    key ={user.name.first + user.name.last}
-                    name={user.name.first}
-                    lastName={user.name.last}
+                    key ={bring.first + user.name.last}
+                    name={bring.first}
+                    lastName={bring.last}
                     email={ user.email}
                     phone={ user.phone}
                     adress={user.location.city + " " +user.location.country}
