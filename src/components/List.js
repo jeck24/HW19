@@ -21,17 +21,6 @@ class List extends Component {
             });
     };
     
-    searchUser = async ()=>{
-        document.getElementById("searchInput").prop = "";
-        const item = API.getUser()
-        .then(res => {
-            res.data.item.sort((a, b) => (a.name.first > b.name.first) ? 1 : -1);
-            this.setState({item: res.data.item });
-            this.setState({temp: res.data.item });
-        });
-        return item;
-    };
-    
     componentDidMount() {
         API.getUser().then(res => {
             res.data.results.sort((a, b) => (a.name.first > b.name.first) ? 1 : -1);

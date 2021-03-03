@@ -48,10 +48,9 @@ h1{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-
 .firstLine{
   border: solid gray 10px;
+  text-align: center;
 }
 
 .firstSection{
@@ -65,3 +64,8 @@ h1{
 .randomUser{
   border: solid grey;
 }
+
+body {
+  background-image: url("https://cdn.hipwallpaper.com/i/70/40/PWsfhu.png");
+  color: #cccccc;
+ }
