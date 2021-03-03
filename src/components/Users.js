@@ -9,9 +9,9 @@ function Users (props) {
                 <div className="firstLine">
                     <div>First Name</div>
                     <div>Last Name</div>
-                    <div>E-mail</div>
-                    <div>Phone</div>
-                    <div>Adress</div>
+                    <div>@</div>
+                    <div>Contact</div>
+                    <div>Lives at</div>
                 </div>
                 
                 {props.data.length > 0 && props.data.map((user)=> {
